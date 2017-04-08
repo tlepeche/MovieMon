@@ -55,7 +55,8 @@ ROOT_URLCONF = 'Rush.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/Users/tlepeche/projet/Pisc_Python/LocRush00/Rush/MovieMon/templates'],
+#		'DIRS': [],
+       'DIRS': ['/Users/tlepeche/projet/Pisc_Python/LocRush00_git/Rush/MovieMon/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

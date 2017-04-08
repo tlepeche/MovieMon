@@ -3,8 +3,8 @@ import json
 
 def load_settings():
 	myDict = dict()
-	fd = open("/Users/tlepeche/projet/Pisc_Python/LocRush00/Rush/Rush/settings.txt")
-	fd2 = open("/Users/tlepeche/projet/Pisc_Python/LocRush00/Rush/Rush/VERIF", 'w')
+	fd = open("/Users/tlepeche/projet/Pisc_Python/LocRush00_git/Rush/Rush/settings.txt")
+	fd2 = open("/Users/tlepeche/projet/Pisc_Python/LocRush00_git/Rush/Rush/VERIF", 'w')
 	for line in fd:
 		myDict.update({ (line[0 : line.index(':')]).strip() : (line[line.index(':') + 1 : len(line)]).strip() })
 	fd.close()
