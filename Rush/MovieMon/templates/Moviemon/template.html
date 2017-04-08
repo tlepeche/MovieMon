@@ -1,0 +1,35 @@
+{% extends "ex01/base.html" %}
+
+{% block head %}
+<title>Ex01 : Moteur de template</title>
+{% endblock %}
+
+{% block css %}
+	{% include 'ex01/style2.css' %}
+{% endblock %}
+
+{% block body %}
+<h2>What is a template ?</h2>
+<p>
+Being a web framework, Django needs a convenient way to generate HTML dynamically. The most common approach relies on templates. A template contains the static parts of the desired HTML output as well as some special syntax describing how dynamic content will be inserted. For a hands-on example of creating HTML pages with templates.
+</p><p>
+A Django project can be configured with one or several template engines (or even zero if you don’t use templates). Django ships built-in backends for its own template system, creatively called the Django template language (DTL), and for the popular alternative Jinja2. Backends for other template languages may be available from third-parties.
+</p><p>
+Django defines a standard API for loading and rendering templates regardless of the backend. Loading consists of finding the template for a given identifier and preprocessing it, usually compiling it to an in-memory representation. Rendering means interpolating the template with context data and returning the resulting string.
+</p><p>
+The Django template language is Django’s own template system. Until Django 1.8 it was the only built-in option available. It’s a good template library even though it’s fairly opinionated and sports a few idiosyncrasies. If you don’t have a pressing reason to choose another backend, you should use the DTL, especially if you’re writing a pluggable application and you intend to distribute templates. Django’s contrib apps that include templates, like django.contrib.admin, use the DTL.
+</p><p>
+For historical reasons, both the generic support for template engines and the implementation of the Django template language live in the django.template namespace.
+</p>
+<h2>BLOCKS</h2>
+<p>Recall that standard Django template commands are denoted by '{ %' and '% }' tags. To start a block, the command is block <NAME>, where <NAME> is the name of the block you wish to create. You must also ensure that you close the block with the endblock command, again enclosed within Django template tags.
+</p>
+<p>
+You can also specify ‘default content’ for your blocks, if you so desire. Our body_block defined above presently has no default content associated with it. This means that if no inheriting template were to employ the use of body_block, nothing would be rendered - as shown in the code snippet below.</p>
+</p>
+
+<h2>'FOR ... IN' and 'IF'</h2>
+<p>
+	for ... in and if allow you to create loops and conditions inside a block. With those two, your templates are even more modular.
+</p>
+{% endblock %}

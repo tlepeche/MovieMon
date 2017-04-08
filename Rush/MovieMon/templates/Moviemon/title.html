@@ -1,0 +1,13 @@
+{% extends "Moviemon/base.html" %}
+
+{% block head %}
+<title>TITLESCREEN TEST</title>
+{% endblock %}
+
+{% block body %}
+<p>
+If you have a background in programming, or if you’re used to languages which mix programming code directly into HTML, you’ll want to bear in mind that the Django template system is not simply Python embedded into HTML. This is by design: the template system is meant to express presentation, not program logic.
+</p><p>
+The Django template system provides tags which function similarly to some programming constructs – an if tag for boolean tests, a for tag for looping, etc. – but these are not simply executed as the corresponding Python code, and the template system will not execute arbitrary Python expressions. Only the tags, filters and syntax listed below are supported by default (although you can add your own extensions to the template language as needed).
+</p>
+{% endblock %}
